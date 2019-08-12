@@ -1,6 +1,8 @@
 import './index.css'
-// import numeral from 'numeral';
+import {getUsers} from './api/userApi'
 
-// const courseValue = numeral(1000).format("£0'0.00");
-// // debugger;
-// // console.log(`packing ${courseValue}`);
+getUsers().then(result => {
+    result.forEach(user => {
+        console.log(user)
+    })
+})
